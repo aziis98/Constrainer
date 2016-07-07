@@ -1,0 +1,76 @@
+body {
+  color: #d0d0d0;
+  background: #fff; }
+
+.sidebar {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  height: 100%;
+  background: #15152b;
+  transition: left 300ms ease-out; }
+  .sidebar h2 {
+    left: 0;
+    right: 0; }
+  .sidebar ul {
+    left: 0;
+    right: 0; }
+    .sidebar ul li {
+      width: 300px;
+      padding: 10px 10px 10px 20px;
+      text-align: left; }
+      .sidebar ul li:hover {
+        background: #2f2f61;
+        cursor: pointer; }
+  .sidebar .toggle {
+    right: 0;
+    width: 30px;
+    height: 60px;
+    background: #fff;
+    transition: background 300ms ease-out, right 300ms ease-out; }
+    .sidebar .toggle:hover {
+      cursor: pointer; }
+    .sidebar .toggle::after {
+      color: #15152b;
+      content: "<";
+      font-family: "Consolas", monospace;
+      font-size: 25px; }
+  .sidebar.hidden {
+    left: -300px; }
+    .sidebar.hidden .toggle {
+      background: #15152b;
+      right: -30px; }
+      .sidebar.hidden .toggle::after {
+        color: #fff;
+        content: ">"; }
+    .sidebar.hidden + .page {
+      left: 0; }
+
+.page {
+  left: 300px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: -1;
+  transition: left 300ms ease-out; }
+  .page .posts {
+    width: 70%;
+    max-width: 700px;
+    height: 1000px;
+    margin-top: 10px; }
+    .page .posts .post {
+      width: 100%;
+      height: 300px;
+      margin: 20px;
+      background: white;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+      border-radius: 0; }
+
+.box {
+  width: 100%;
+  height: 200px;
+  border: 1px solid darkgoldenrod; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,80 @@
+
+html, body
+  font-family: Ubunut, sans-serif
+
+*
+  position: absolute
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  text-align: center
+
+h1, h2, h3, h4, h5, h6
+  padding: 15px 0
+
+.fill-page
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+
+.clip
+  overflow: hidden
+
+.content-flow
+  &-h
+    display: flex
+    align-items: center
+    flex-direction: row
+    & > *
+      position: relative
+  &-v
+    display: flex
+    align-items: center
+    flex-direction: column
+    & > *
+      position: relative
+  &-vh
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+ul
+  list-style: none
+
+.center
+  &-h
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+  &-v
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

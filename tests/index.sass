@@ -1,0 +1,90 @@
+// $sidebar-color:
+
+$sidebar-background: #15152b
+$sidebar-item-border-color: #2a2a5d
+$background: #fff
+body
+  color: #d0d0d0
+  background: $background
+
+.sidebar
+  left: 0
+  top: 0
+  bottom: 0
+  width: 300px
+  height: 100%
+
+  background: $sidebar-background
+  transition: left 300ms ease-out
+
+  h2
+    left: 0
+    right: 0
+
+  ul
+    left: 0
+    right: 0
+
+    li
+      width: 300px
+      padding: 10px 10px 10px 20px
+      text-align: left
+      &:hover
+        background: #2f2f61
+        cursor: pointer
+  .toggle
+    right: 0
+    width: 30px
+    height: 60px
+
+    background: $background
+    transition: background 300ms ease-out, right 300ms ease-out
+    &:hover
+      cursor: pointer
+    &::after
+      color: $sidebar-background
+      content: '<'
+      font-family: 'Consolas', monospace
+      font-size: 25px
+
+  &.hidden
+    left: -300px
+
+    .toggle
+      background: $sidebar-background
+      right: -30px
+      &::after
+        color: $background
+        content: '>'
+
+    &+.page
+      left: 0
+
+.page
+  left: 300px
+  right: 0
+  top: 0
+  bottom: 0
+  overflow-y: auto
+
+  z-index: -1
+  transition: left 300ms ease-out
+
+  .posts
+    width: 70%
+    max-width: 700px
+    height: 1000px
+    margin-top: 10px
+    .post
+      width: 100%
+      height: 300px
+      margin: 20px
+      background: white
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.5)
+      border-radius: 0
+
+
+.box
+  width: 100%
+  height: 200px
+  border: 1px solid darkgoldenrod
