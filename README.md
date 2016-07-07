@@ -19,7 +19,7 @@ Makes the element fill the whole page
 
 Elements within flow horizontally and are centered on the horizontal mid line of the container
 
-#### .content-flow-hv
+**.content-flow-hv**
 
 Centers the elements also vertically
 
@@ -27,6 +27,35 @@ Centers the elements also vertically
 
 Elements within flow vertically and are centered on the vertival mid line of the container
 
-### .content-flow-vh
+**.content-flow-vh**
 
 Centers the elements also horizontally
+
+## Supposed Usage
+
+Example 1:
+
+HTML:
+```html
+    <div class="fill-page">
+        <div id="left-box">
+            Some Text
+            <div id="centered" class="center-x center-y">
+                Centered!
+            </div>
+        </div>
+        <div id="right-box" class="content-flow-v">
+            <div class="element"></div>
+            <div class="element"></div>
+            <div class="element"></div>
+        </div>
+    </div>
+```
+
+```sass
+    #left-box
+        left: 0
+        top: 0
+        bottom: 0
+        width: 400
+```

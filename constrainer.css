@@ -44,6 +44,22 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center; }
 
+.content-fill-h {
+  display: flex;
+  flex-direction: row; }
+  .content-fill-h > * {
+    position: relative;
+    flex-grow: 1; }
+.content-fill-v {
+  display: flex;
+  flex-direction: column; }
+  .content-fill-v > * {
+    position: relative;
+    flex-grow: 1; }
+
+.content-center {
+  align-items: center; }
+
 ul {
   list-style: none; }
 
@@ -55,5 +71,10 @@ ul {
   position: absolute;
   top: 50%;
   transform: translateY(-50%); }
+.center-hv {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=constrainer.css.map */
